@@ -59,3 +59,21 @@ ul:hover a:not(:hover) {
   color: #283841;
   background-color: transparent;
 }
+
+label{
+  width: 5rem;
+  height: 2rem;
+  position: relative;
+}
+
+label div{
+  height: 5px;
+  width: 100%;
+  background-color: #283841;
+  border-radius: 100vmax;
+  position: relative;
+}
+
+label div:nth-child(1){top: 0;}
+label div:nth-child(2){top: 50%;}
+label div:nth-child(3){top: 100%;}
