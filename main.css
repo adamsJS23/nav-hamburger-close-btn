@@ -1,16 +1,61 @@
-*,*::before,*::after{
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
 
-html{
+html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: sans-serif;
 }
 
+header {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem 0;
+}
 
+img {
+  height: 2rem;
+  width: auto;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #283841;
+  padding: 1rem 1.5rem;
+  border-radius: 100vmax;
+}
+
+.active {
+  background-color: #283841;
+  color: #fff;
+}
+
+a:hover {
+  background-color: #283841;
+  color: #fff;
+}
+
+ul:hover a:not(:hover) {
+  color: #283841;
+  background-color: transparent;
+}
