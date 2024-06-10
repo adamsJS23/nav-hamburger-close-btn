@@ -80,19 +80,21 @@ label div {
 
 label div:nth-child(1) {
   top: 0;
-  transition: top ease 0.3s, transform ease 0.3s 0.3s;
-
+  /* transition: top ease 0.3s, transform ease 0.3s 0.3s; */
+  transition: all ease 0.3s;
 }
 
 label div:nth-child(2) {
   transform: scale(1);
   top: 50%;
   transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 label div:nth-child(3) {
   top: 100%;
-  transition: top ease 0.3s, transform ease 0.3s 0.3s;
+  /* transition: top ease 0.3s, transform ease 0.3s 0.3s; */
+  transition: all ease 0.3s;
 }
 
 label {
