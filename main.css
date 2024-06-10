@@ -60,13 +60,17 @@ ul:hover a:not(:hover) {
   background-color: transparent;
 }
 
-label{
-  width: 5rem;
-  height: 2rem;
+input {
+  display: none;
+}
+
+label {
+  width: 4.5rem;
+  height: 3rem;
   position: relative;
 }
 
-label div{
+label div {
   height: 5px;
   width: 100%;
   background-color: #283841;
@@ -74,6 +78,76 @@ label div{
   position: relative;
 }
 
-label div:nth-child(1){top: 0;}
-label div:nth-child(2){top: 50%;}
-label div:nth-child(3){top: 100%;}
+label div:nth-child(1) {
+  top: 0;
+  transition: top ease 0.3s, transform ease 0.3s 0.3s;
+
+}
+
+label div:nth-child(2) {
+  transform: scale(1);
+  top: 50%;
+  transition: all ease 0.3s;
+}
+
+label div:nth-child(3) {
+  top: 100%;
+  transition: top ease 0.3s, transform ease 0.3s 0.3s;
+}
+
+label {
+  cursor: pointer;
+  display: none;
+}
+
+@media only screen and (max-width: 48em) {
+  label {
+    display: block;
+  }
+
+  header {
+    position: relative;
+  }
+
+  nav {
+    margin-top: 10rem;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    transition: all ease 0.5s;
+  }
+
+  ul {
+    padding-top: 1rem;
+    flex-direction: column;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input:checked + header nav {
+    height: 100vh;
+  }
+
+  input:checked + header label div:nth-child(1) {
+    top: 63%;
+    transform: rotate(45deg);
+  }
+
+  input:not(:checked) + header label div:nth-child(1) {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  input:checked + header label div:nth-child(2) {
+    transform: scale(0);
+  }
+
+  input:checked + header label div:nth-child(3) {
+    top: 30%;
+    transform:rotate(-45deg);
+  }
+}
