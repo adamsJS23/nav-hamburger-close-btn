@@ -76,25 +76,22 @@ label div {
   background-color: #283841;
   border-radius: 100vmax;
   position: relative;
+  transition: all ease 0.3s;
 }
 
 label div:nth-child(1) {
   top: 0;
   /* transition: top ease 0.3s, transform ease 0.3s 0.3s; */
-  transition: all ease 0.3s;
 }
 
 label div:nth-child(2) {
   transform: scale(1);
   top: 50%;
-  transition: all ease 0.3s;
-  transition: all ease 0.3s;
 }
 
 label div:nth-child(3) {
   top: 100%;
   /* transition: top ease 0.3s, transform ease 0.3s 0.3s; */
-  transition: all ease 0.3s;
 }
 
 label {
@@ -112,12 +109,11 @@ label {
   }
 
   nav {
-    margin-top: 10rem;
     width: 100%;
     height: 0;
     position: absolute;
     overflow: hidden;
-    top: 0;
+    top: 10rem;
     left: 0;
     transition: all ease 0.5s;
   }
@@ -131,17 +127,12 @@ label {
   }
 
   input:checked + header nav {
-    height: 100vh;
+    height: calc(100vh - 10rem);
   }
 
   input:checked + header label div:nth-child(1) {
     top: 63%;
     transform: rotate(45deg);
-  }
-
-  input:not(:checked) + header label div:nth-child(1) {
-    top: 0;
-    transform: rotate(0deg);
   }
 
   input:checked + header label div:nth-child(2) {
@@ -150,6 +141,6 @@ label {
 
   input:checked + header label div:nth-child(3) {
     top: 30%;
-    transform:rotate(-45deg);
+    transform: rotate(-45deg);
   }
 }
